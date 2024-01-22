@@ -1,4 +1,4 @@
-package ru.inno.courses;
+package ru.inno.courses.homework2;
 
 public class Homework2 {
 

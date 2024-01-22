@@ -40,13 +40,13 @@
     "settings.editor.selected.configurable": "preferences.updates"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Homework2">
-    <configuration name="Homework2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.Homework2" />
+  <component name="RunManager" selected="Application.ru.inno.courses.homework2.Homework2">
+    <configuration name="Egor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.Egor" />
       <module name="MyCourses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.inno.courses.*" />
+          <option name="PATTERN" value="ru.inno.courses.homework2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -54,12 +54,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ru.inno.courses.Egor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.Egor" />
+    <configuration name="ru.inno.courses.homework2.Homework2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework2.Homework2" />
       <module name="MyCourses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.inno.courses.*" />
+          <option name="PATTERN" value="ru.inno.courses.homework2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,7 +69,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Homework2" />
+        <item itemvalue="Application.ru.inno.courses.homework2.Homework2" />
         <item itemvalue="Application.ru.inno.courses.Egor" />
       </list>
     </recent_temporary>
