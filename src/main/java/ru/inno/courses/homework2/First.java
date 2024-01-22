@@ -1,6 +1,6 @@
 package ru.inno.courses.homework2;
 
-public class Homework2 {
+public class First {
 
     public static void main(String[] args) {
 
