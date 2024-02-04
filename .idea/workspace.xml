@@ -41,13 +41,26 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.First">
+  <component name="RunManager" selected="Application.Task2">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework2.First" />
       <module name="MyCourses" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.inno.courses.homework2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework2.task2.Task2" />
+      <module name="MyCourses" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.inno.courses.homework2.task2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,6 +83,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Task2" />
         <item itemvalue="Application.First" />
         <item itemvalue="Application.ru.inno.courses.Egor" />
       </list>
@@ -112,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705886095547</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1707070525008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707070525008</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

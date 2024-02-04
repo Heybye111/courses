@@ -9,7 +9,7 @@ public class Flat {
     int flatNumber;
 
 
- public Flat(String lobby, String bathroom, String kitchen, String livingRoom, String bedRoom, String price, double square, int floor, int roomCount, int flatNumber) {
+ public Flat(String price, double square, int floor, int roomCount, int flatNumber) {
 
      this.price = price;
      this.square = square;
