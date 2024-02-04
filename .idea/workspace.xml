@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38f4782f-0ef3-43b3-b491-bc58bea09345" name="Changes" comment="home work">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task2/Flat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task2/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task2/Task2.java" afterDir="false" />
+    <list default="true" id="38f4782f-0ef3-43b3-b491-bc58bea09345" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/Homework2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/First.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task2/Flat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task2/Flat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task2/Task2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task2/Task2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Heybye/IdeaProjects/courses",
-    "settings.editor.selected.configurable": "preferences.updates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Heybye/IdeaProjects/courses&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.First">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework2.First" />
@@ -107,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705885240128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1705886095547</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705886095547</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +129,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="home work" />
-    <option name="LAST_COMMIT_MESSAGE" value="home work" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
