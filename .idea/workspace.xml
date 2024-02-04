@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38f4782f-0ef3-43b3-b491-bc58bea09345" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task3/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework2/task3/Task3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Films.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Loop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +30,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2atnvHTMPxX5w3cLJwDQa9tw3Vw" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,13 +45,39 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Task3">
-    <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework2.First" />
+  <component name="RunManager" selected="Application.Loop">
+    <configuration name="Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework3.Array" />
       <module name="MyCourses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.inno.courses.homework2.*" />
+          <option name="PATTERN" value="ru.inno.courses.homework3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Films" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework3.Films" />
+      <module name="MyCourses" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.inno.courses.homework3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Loop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework3.Loop" />
+      <module name="MyCourses" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.inno.courses.homework3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,25 +111,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ru.inno.courses.Egor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.Egor" />
-      <module name="MyCourses" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.inno.courses.homework2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Loop" />
+        <item itemvalue="Application.Films" />
+        <item itemvalue="Application.Array" />
         <item itemvalue="Application.Task3" />
         <item itemvalue="Application.Task2" />
-        <item itemvalue="Application.First" />
-        <item itemvalue="Application.ru.inno.courses.Egor" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707071022629</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1707072298588</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707072298588</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
