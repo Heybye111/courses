@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38f4782f-0ef3-43b3-b491-bc58bea09345" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Array.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Films.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Loop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework4/Playground.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Films.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Films.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Loop">
+  <component name="RunManager" selected="Application.Playground">
     <configuration name="Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework3.Array" />
       <module name="MyCourses" />
@@ -85,12 +83,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework2.task2.Task2" />
+    <configuration name="Playground" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework4.Playground" />
       <module name="MyCourses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.inno.courses.homework2.task2.*" />
+          <option name="PATTERN" value="ru.inno.courses.homework4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Playground" />
         <item itemvalue="Application.Loop" />
         <item itemvalue="Application.Films" />
         <item itemvalue="Application.Array" />
         <item itemvalue="Application.Task3" />
-        <item itemvalue="Application.Task2" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707072298588</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <created>1707077868518</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707077868518</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
