@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38f4782f-0ef3-43b3-b491-bc58bea09345" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/certification/Playground.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/certification/Sensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/certification/Task1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Films.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework3/Films.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework4/Playground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/inno/courses/homework4/Playground.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +48,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Playground">
-    <configuration name="Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework3.Array" />
-      <module name="MyCourses" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.inno.courses.homework3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ru.inno.courses.certification.Playground">
     <configuration name="Films" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework3.Films" />
       <module name="MyCourses" />
@@ -99,12 +88,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.homework2.task3.Task3" />
+    <configuration name="Task1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.certification.Task1" />
       <module name="MyCourses" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.inno.courses.homework2.task3.*" />
+          <option name="PATTERN" value="ru.inno.courses.certification.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ru.inno.courses.certification.Playground" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.inno.courses.certification.Playground" />
+      <module name="MyCourses" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.inno.courses.certification.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ru.inno.courses.certification.Playground" />
+        <item itemvalue="Application.Task1" />
         <item itemvalue="Application.Playground" />
         <item itemvalue="Application.Loop" />
         <item itemvalue="Application.Films" />
-        <item itemvalue="Application.Array" />
-        <item itemvalue="Application.Task3" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707729406947</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <created>1707776698291</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1707776698291</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
