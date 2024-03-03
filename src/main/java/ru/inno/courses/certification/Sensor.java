@@ -34,7 +34,7 @@ public class Sensor {
     }
 
 
-    public static LocalDate DateOfWatering(String season, LocalDate date) {
+    public static LocalDate dateOfWatering(String season, LocalDate date) {
         LocalDate dateToWatering;
         if (season.equals("winter")) {
             dateToWatering = date.plusDays(30);

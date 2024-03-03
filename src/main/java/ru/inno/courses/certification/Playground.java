@@ -21,7 +21,7 @@ public class Playground {
         if (season.equals("summer") && humidity <= 30) {
             System.out.println("Дата для полива: " + wateringDay);
         } else {
-            LocalDate finalWateringDayDate = DateOfWatering(season, LocalDate.parse(date));
+            LocalDate finalWateringDayDate = dateOfWatering(season, LocalDate.parse(date));
             System.out.println("Дата для полива: " + finalWateringDayDate);
         }
     }
