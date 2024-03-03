@@ -18,10 +18,6 @@ public class Films {
         for (Movie currentMovie : films) {
             System.out.println(currentMovie.name + " " + currentMovie.genre + " " + currentMovie.rating);
         }
-
-
-
-
     }
 
 }

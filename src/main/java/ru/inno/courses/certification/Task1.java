@@ -11,7 +11,7 @@ public class Task1 {
         int lengthOfSentence = (countOfSpaces * lengthOfSpace) + lengthOfWords;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите длинну забора: ");
+        System.out.print("Введите длинну забора в см: ");
         int lengthOfFence = scanner.nextInt();
         boolean isSentenceCanBeWrite = lengthOfFence >= lengthOfSentence;
 
