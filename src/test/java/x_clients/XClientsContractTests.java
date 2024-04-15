@@ -3,8 +3,8 @@ package x_clients;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import netscape.javascript.JSObject;
 import x_clients.model.Employee;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -12,8 +12,9 @@ import io.restassured.http.ContentType;
 
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.Matchers.*;
 import static io.restassured.RestAssured.given;
@@ -29,22 +30,23 @@ public class XClientsContractTests {
 
     public static String TOKEN;
 
- //   public int companyId;
+    static int companyId;
 
 
     @BeforeAll
 
-    static void auth() {
+    public static void setup() throws IOException {
         getToken();
-//        int companyId = createNewCompany();
+        String myCompanyName = """ 
+                {
+                  "name": "Beta bank"
+                }
+                """;
+        companyId = createNewCompany(myCompanyName);
     }
-
-
-
 
     @Test
     void createNewEmployee() {
-        int companyId = 1504;
         String employeeParams = """
                 {
                  "firstName": "Andrew",
@@ -58,15 +60,13 @@ public class XClientsContractTests {
                  "isActive": true
                  }
                 """;
-        int newEmployeeId = createNewEmployee(companyId,employeeParams);
+        int newEmployeeId = createNewEmployee(employeeParams);
         assertNotNull(newEmployeeId);
         assertNotEquals(newEmployeeId, 0);
     }
 
-
     @Test
     void getEmployeeInfo() {
-        int companyId = 1504;
         String employeeParams = """
                 {
                  "firstName": "Andrew",
@@ -80,39 +80,56 @@ public class XClientsContractTests {
                  "isActive": true
                  }
                 """;
-        int employeeId = createNewEmployee(companyId,employeeParams);
+        int employeeId = createNewEmployee(employeeParams);
         Employee employee = getEmployeeInfo(employeeId);
 
         Gson gson = new Gson();
         JsonObject jsonObj = gson.fromJson(employeeParams, JsonObject.class);
+
         assertEquals(employee.getFirstName(), jsonObj.get("firstName").getAsString());
-        assertTrue(employee.getActive(),jsonObj.get("isActive").getAsString());
+        assertTrue(employee.getActive(), jsonObj.get("isActive").getAsString());
         assertEquals(employee.getPhone(), jsonObj.get("phone").getAsString());
-        assertEquals(employee.getBirthdate(),jsonObj.get("birthdate").getAsString());
+        assertEquals(employee.getBirthdate(), jsonObj.get("birthdate").getAsString());
         assertEquals(employee.getAvatar_url(), jsonObj.get("url").getAsString());
         assertEquals(employee.getEmail(), jsonObj.get("email").getAsString());
         assertEquals(employee.getLastName(), jsonObj.get("lastName").getAsString());
         assertEquals(employee.getMiddleName(), jsonObj.get("Olegovich").getAsString());
     }
 
-
     @Test
     public void patchEmployee() {
-        Employee employee = patchEmployeeInfo(4844);
-        System.out.println(employee);
-
-
+        String employeeParams = """
+                {
+                 "firstName": "Andrew",
+                 "lastName": "Antonov",
+                 "middleName": "Olegovich",
+                 "companyId":""" + companyId + """
+                 , "email": "ya@mail.ru",
+                 "url": "asdsa",
+                 "phone": "21321312",
+                 "birthdate": "2024-04-14",
+                 "isActive": true
+                 }
+                """;
+        int employeeId = createNewEmployee(employeeParams);
+        String patchEmployeeParams = """
+                {
+                "lastName": "NotAndrew",
+                  "email": "google@ya.ru",
+                  "url": "Changed",
+                  "phone": "99005553535",
+                  "isActive": false
+                }
+                """;
+        Employee employee = patchEmployeeInfo(employeeId, patchEmployeeParams);
+        Gson gson = new Gson();
+        JsonObject jsonObj = gson.fromJson(patchEmployeeParams, JsonObject.class);
+        assertEquals(employee.getLastName(), jsonObj.get("lastName").getAsString());
+        assertEquals(employee.getEmail(), jsonObj.get("email").getAsString());
+        assertEquals(employee.getUrl(), jsonObj.get("url").getAsString());
+        assertEquals(employee.getPhone(), jsonObj.get("phone").getAsString());
+        assertFalse(employee.getActive(), jsonObj.get("isActive").getAsString());
     }
-
-//    @Test
-//    void createEmployeeAndAsserWithDataBase() {
-//        int companyId = createNewCompany();
-//        assertNotNull(companyId);
-//        int employeeId = createNewEmployee(companyId);
-//        assertNotNull(employeeId);
-//
-//
-//    }
 
     public static String getToken() {
         String creds = """
@@ -133,23 +150,12 @@ public class XClientsContractTests {
         return TOKEN;
     }
 
-
-    public Employee patchEmployeeInfo(int employeeId) {
-        String employeeParams = """
-                {
-                "lastName": "NotAndrew",
-                  "email": "google@ya.ru",
-                  "url": "Changed",
-                  "phone": "99005553535",
-                  "isActive": false
-                }
-                """;
-
+    public Employee patchEmployeeInfo(int employeeId, String patchEmployeeParams) {
         return given()
                 .log().all()
                 .contentType(ContentType.JSON)
                 .header("x-client-token", TOKEN)
-                .body(employeeParams)
+                .body(patchEmployeeParams)
                 .when()
                 .patch(employeeURL + "/" + employeeId)
                 .then()
@@ -158,12 +164,7 @@ public class XClientsContractTests {
                 .extract().as(Employee.class);
     }
 
-    public static int createNewCompany() {
-        String myCompanyName = """ 
-                {
-                  "name": "Beta bank"
-                }
-                """;
+    public static int createNewCompany(String myCompanyName) {
         return given()
                 .log().all()
                 .body(myCompanyName)
@@ -177,8 +178,7 @@ public class XClientsContractTests {
                 .extract().path("id");
     }
 
-    public int createNewEmployee(int companyId, String employeeParams) {
-
+    public int createNewEmployee(String employeeParams) {
         return given()
                 .log().all()
                 .body(employeeParams)
@@ -204,6 +204,53 @@ public class XClientsContractTests {
                 .statusCode(200) //В свагере описано что статус код должен быть 201, по факту 200. так что тут баг в контракте
                 .extract().response();
         return response.body().as(Employee.class);
+    }
+    public List<Map<String, Object>> getListOfEmployees() {
+        String response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .when()
+                .get(employeeURL + "/" + companyId)
+                .then()
+                .assertThat().statusCode(200)
+                .extract().asString();
+
+        JsonPath jsonPath = new JsonPath(response);
+        List<Map<String, Object>> employees = jsonPath.getList("$");
+
+        return employees;
+    }
+    @Test
+    void listEmployees() {
+        String employeeParams = """
+                {
+                 "firstName": "Andrew",
+                 "lastName": "Antonov",
+                 "middleName": "Olegovich",
+                 "companyId":""" + companyId + """
+                 , "email": "ya@mail.ru",
+                 "url": "asdsa",
+                 "phone": "21321312",
+                 "birthdate": "2024-04-14",
+                 "isActive": true
+                 }
+                """;
+        String employeeParams2 = """
+                {
+                 "firstName": "asd",
+                 "lastName": "fff",
+                 "middleName": "ggg",
+                 "companyId":""" + companyId + """
+                 , "email": "zxa@mail.ru",
+                 "url": "arrrrra",
+                 "phone": "2132321312",
+                 "birthdate": "2022-04-14",
+                 "isActive": true
+                 }
+                """;
+        createNewEmployee(employeeParams);
+        createNewEmployee(employeeParams2);
+        List<Map<String, Object>> x = getListOfEmployees();
+        System.out.println(x);
     }
 
 }
