@@ -4,10 +4,22 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.util.Objects;
+
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties
 
-public class Employee{
+public class Employee {
+    int id;
+    Boolean isActive = null;
+    String firstName;
+    String lastName;
+    String middleName;
+    String phone;
+    String email;
+    String birthdate;
+    String avatar_url;
+    int companyId;
+
     public int getId() {
         return id;
     }
@@ -22,22 +34,6 @@ public class Employee{
 
     public void setActive(Boolean active) {
         isActive = active;
-    }
-
-    public String getCreateDateTime() {
-        return createDateTime;
-    }
-
-    public void setCreateDateTime(String createDateTime) {
-        this.createDateTime = createDateTime;
-    }
-
-    public String getLastChangedDateTime() {
-        return lastChangedDateTime;
-    }
-
-    public void setLastChangedDateTime(String lastChangedDateTime) {
-        this.lastChangedDateTime = lastChangedDateTime;
     }
 
     public String getFirstName() {
@@ -76,11 +72,8 @@ public class Employee{
         return email;
     }
 
-    public Employee(int id, Boolean isActive, String createDateTime, String lastChangedDateTime, String firstName, String lastName, String middleName, String phone, String email, String birthdate, String avatar_url, int companyId, String url) {
-        this.id = id;
+    public Employee(Boolean isActive, String firstName, String lastName, String middleName, String phone, String email, String birthdate, String avatar_url, int companyId) {
         this.isActive = isActive;
-        this.createDateTime = createDateTime;
-        this.lastChangedDateTime = lastChangedDateTime;
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -89,7 +82,6 @@ public class Employee{
         this.birthdate = birthdate;
         this.avatar_url = avatar_url;
         this.companyId = companyId;
-        this.url = url;
     }
 
     public void setEmail(String email) {
@@ -109,8 +101,6 @@ public class Employee{
         return "Employee{" +
                 "id=" + id +
                 ", isActive=" + isActive +
-                ", createDateTime='" + createDateTime + '\'' +
-                ", lastChangedDateTime='" + lastChangedDateTime + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", middleName='" + middleName + '\'' +
@@ -119,7 +109,6 @@ public class Employee{
                 ", birthdate='" + birthdate + '\'' +
                 ", avatar_url='" + avatar_url + '\'' +
                 ", companyId=" + companyId +
-                ", url='" + url + '\'' +
                 '}';
     }
 
@@ -128,12 +117,12 @@ public class Employee{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return id == employee.id && companyId == employee.companyId && Objects.equals(isActive, employee.isActive) && Objects.equals(createDateTime, employee.createDateTime) && Objects.equals(lastChangedDateTime, employee.lastChangedDateTime) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(middleName, employee.middleName) && Objects.equals(phone, employee.phone) && Objects.equals(email, employee.email) && Objects.equals(birthdate, employee.birthdate) && Objects.equals(avatar_url, employee.avatar_url) && Objects.equals(url, employee.url);
+        return id == employee.id && companyId == employee.companyId && Objects.equals(isActive, employee.isActive) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(middleName, employee.middleName) && Objects.equals(phone, employee.phone) && Objects.equals(email, employee.email) && Objects.equals(birthdate, employee.birthdate) && Objects.equals(avatar_url, employee.avatar_url);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, isActive, createDateTime, lastChangedDateTime, firstName, lastName, middleName, phone, email, birthdate, avatar_url, companyId, url);
+        return Objects.hash(id, isActive, firstName, lastName, middleName, phone, email, birthdate, avatar_url, companyId);
     }
 
     public String getAvatar_url() {
@@ -151,28 +140,6 @@ public class Employee{
     public void setCompanyId(int companyId) {
         this.companyId = companyId;
     }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    int id;
-    Boolean isActive = null;
-    String createDateTime;
-    String lastChangedDateTime;
-    String firstName;
-    String lastName;
-    String middleName;
-    String phone;
-    String email;
-    String birthdate;
-    String avatar_url;
-    int companyId;
-    String url;
 
 
 }
