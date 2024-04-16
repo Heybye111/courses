@@ -3,6 +3,7 @@ package ru.inno.courses.certification;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import ru.inno.courses.certification.model.Company;
 import ru.inno.courses.certification.model.Employee;
 
 import java.util.List;
@@ -17,8 +18,8 @@ public class XClients {
     public static String TOKEN;
 
 
-    public static String getToken(String username, String password) {
-        String creds = "{\"username\": \"" + username + "\",\"password\": \"" + password + "\"}";
+    public static String getToken(String login, String pass) {
+        String creds = "{\"username\": \"" + login + "\",\"password\": \"" + pass + "\"}";
         TOKEN = given()
                 .log().all()
                 .body(creds)
@@ -45,10 +46,10 @@ public class XClients {
                 .extract().as(Employee.class);
     }
 
-    public static int createNewCompany(String myCompanyName) {
+    public static int createNewCompany(Company companyName) {
         return given()
                 .log().all()
-                .body(myCompanyName)
+                .body(companyName)
                 .header("x-client-token", TOKEN)
                 .contentType(ContentType.JSON)
                 .when().post(URL)
@@ -103,6 +104,4 @@ public class XClients {
 
     }
 
-    public static void main(String[] args) {
-    }
 }

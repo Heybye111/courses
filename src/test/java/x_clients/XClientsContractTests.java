@@ -2,30 +2,23 @@ package x_clients;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeEach;
 import ru.inno.courses.certification.XClients;
+import ru.inno.courses.certification.model.Company;
 import ru.inno.courses.certification.model.Employee;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import io.restassured.http.ContentType;
-
-
 import java.io.IOException;
 import java.util.List;
 
-import static org.hamcrest.Matchers.*;
-import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
 
 public class XClientsContractTests {
 
-    int companyId;
+    static int companyId;
 
-    Employee employee = new Employee(true, "Alex", "Smirnof", "Egorovich",
-            "9133546665", "ya@mail.ru", "1995-05-04", "pixels.com/123", companyId);
+
 
     @BeforeAll
     public static void setup() throws IOException {
@@ -34,11 +27,14 @@ public class XClientsContractTests {
 
     @BeforeEach
     public void setUp() {
-        companyId = XClients.createNewCompany("Beta bank");
+        Company company = new Company("Beta bank");
+        companyId = XClients.createNewCompany(company);
     }
 
     @Test
     void createNewEmployee() {
+        Employee employee = new Employee(true, "Alex", "Smirnof", "Egorovich",
+                "9133546665", "ya@mail.ru", "1995-05-04", "pixels.com/123", companyId);
         int newEmployeeId = XClients.createNewEmployee(employee);
         assertNotNull(newEmployeeId);
         assertNotEquals(0, newEmployeeId);
@@ -46,6 +42,8 @@ public class XClientsContractTests {
 
     @Test
     void getEmployeeInfo() {
+        Employee employee = new Employee(true, "Alex", "Smirnof", "Egorovich",
+                "9133546665", "ya@mail.ru", "1995-05-04", "pixels.com/123", companyId);
         int employeeId = XClients.createNewEmployee(employee);
         Employee employeeInfo = XClients.getEmployeeInfo(employeeId);
 
@@ -62,6 +60,11 @@ public class XClientsContractTests {
 
     @Test
     void listEmployees() {
+        Employee employee = new Employee(true, "Alex", "Smirnof", "Egorovich",
+                "9133546665", "ya@mail.ru", "1995-05-04", "pixels.com/123", companyId);
+        XClients.createNewEmployee(employee);
+        employee.setFirstName("John");
+        employee.setLastName("Dought");
         XClients.createNewEmployee(employee);
         List<Employee> list = XClients.getListOfEmployees(companyId);
         assertEquals(2, list.size());
@@ -69,6 +72,8 @@ public class XClientsContractTests {
 
     @Test
     public void patchEmployee() {
+        Employee employee = new Employee(true, "Alex", "Smirnof", "Egorovich",
+                "9133546665", "ya@mail.ru", "1995-05-04", "pixels.com/123", companyId);
         int employeeId = XClients.createNewEmployee(employee);
         String patchEmployeeParams = """
                 {
