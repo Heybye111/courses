@@ -1,4 +1,4 @@
-package x_clients.model;
+package ru.inno.courses.certification.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

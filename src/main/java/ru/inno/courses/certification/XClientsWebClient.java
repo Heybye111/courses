@@ -1,8 +1,8 @@
-package x_clients;
+package ru.inno.courses.certification;
 
 import io.restassured.http.ContentType;
-import x_clients.model.Company;
-import x_clients.model.CreateCompany;
+import ru.inno.courses.certification.model.Company;
+import ru.inno.courses.certification.model.CreateCompany;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
