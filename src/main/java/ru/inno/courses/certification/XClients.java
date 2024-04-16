@@ -12,21 +12,13 @@ import static org.hamcrest.Matchers.greaterThan;
 
 public class XClients {
     public static final String URL = "https://x-clients-be.onrender.com/company";
-    public static final String URL_ID = "https://x-clients-be.onrender.com/company/{id}";
     public static final String URL_AUTH = "https://x-clients-be.onrender.com/auth/login";
-
     public static final String employeeURL = "https://x-clients-be.onrender.com/employee";
-
     public static String TOKEN;
 
 
-    public static String getToken() {
-        String creds = """
-                {
-                "username": "bloom",
-                "password": "fire-fairy"
-                }
-                        """;
+    public static String getToken(String username, String password) {
+        String creds = "{\"username\": \"" + username + "\",\"password\": \"" + password + "\"}";
         TOKEN = given()
                 .log().all()
                 .body(creds)

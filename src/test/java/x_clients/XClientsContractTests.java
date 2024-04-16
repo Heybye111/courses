@@ -29,18 +29,12 @@ public class XClientsContractTests {
 
     @BeforeAll
     public static void setup() throws IOException {
-        XClients.getToken();
+        XClients.getToken("bloom", "fire-fairy");
     }
 
     @BeforeEach
     public void setUp() {
-        String myCompanyName = """ 
-                {
-                  "name": "Beta bank"
-                }
-                """;
-        companyId = XClients.createNewCompany(myCompanyName);
-
+        companyId = XClients.createNewCompany("Beta bank");
     }
 
     @Test
